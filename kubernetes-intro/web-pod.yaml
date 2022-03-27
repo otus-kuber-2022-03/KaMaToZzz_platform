@@ -11,6 +11,8 @@ spec:
       volumeMounts:
       - name: app
         mountPath: /app
+      ports:
+        - containerPort: 8000
   initContainers:
     - name: init
       image: busybox:1.35.0
