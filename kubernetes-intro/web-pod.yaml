@@ -7,15 +7,12 @@ metadata:
 spec:
   containers:
     - name: web
-      image: alushtaa/homework:0.6
+      image: alushtaa/homework:0.7
       volumeMounts:
       - name: app
         mountPath: /app
       ports:
         - containerPort: 8000
-  volumes:
-  - name: app
-    emptyDir: {}
   initContainers:
     - name: init
       image: busybox:1.35.0
@@ -23,3 +20,6 @@ spec:
       - name: app
         mountPath: /app
       command: ['sh', '-c', 'wget --no-check-certificate -O- https://tinyurl.com/otus-k8s-intro | sh']
+  volumes:
+  - name: app
+    emptyDir: {}

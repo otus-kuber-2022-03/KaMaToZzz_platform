@@ -14,4 +14,4 @@ RUN usermod -u 1001 nginx
 
 EXPOSE 8000
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
