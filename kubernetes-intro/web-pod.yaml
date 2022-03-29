@@ -7,12 +7,10 @@ metadata:
 spec:
   containers:
     - name: web
-      image: alushtaa/homework:0.7
+      image: alushtaa/homework:0.1
       volumeMounts:
       - name: app
         mountPath: /app
-      ports:
-        - containerPort: 8000
   initContainers:
     - name: init
       image: busybox:1.35.0
